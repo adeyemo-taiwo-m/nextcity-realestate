@@ -208,7 +208,7 @@ contactBtn.addEventListener(`click`, function (e) {
 
 // Get stated listing
 getStarted.addEventListener(`click`, function () {
-  Document.querySelector(`$get-listed`)
+  document
     .querySelector(`.list-apartment`)
     .scrollIntoView({ behavior: `smooth` });
 });
