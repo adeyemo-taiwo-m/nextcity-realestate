@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextCity Realty</title>
+    <link rel="icon" href="/img/NextCity-logo.png" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="/css/fontawesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+   
+    <script defer src="/js/script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="relative">
+    <!-- Modal scren -->
+    <section id="modal" class="h-screen fixed  w-3/5 hidden bg-modal-bg rounded-tl-4xl rounded-bl-4xl  z-100  top-0 right-0  modal-bg  text-background "> 
+        <i
+                class="fa-times close-modal absolute cursor-pointer   top-14 right-10 fa text-background text-3xl"
+                aria-hidden="true"
+              ></i>
+      <div class="modal-content  flex items-center justify-center h-full ">
+       
+        
+      
+      <div class="w-full h-full flex justify-center items-center text-3xl text-center">
+        
+           <ul class=" space-y-10">
+              <li ><a class="nav-link-modal   " href="#">Home</a></li>
+              <li><a class="nav-link-modal " href="#section-1">About Us</a></li>
+              <li><a class="nav-link-modal " href="#section-2">Services</a></li>
+              <li><a class="nav-link-modal " href="#section-3">Agents</a></li>
+              <li><a class="nav-link-modal "  href="#section-4" >Reviews</a></li>
+            </ul>
+      </div>
+      </div>
+    </section>
+    <header class="header bg-background h-fit w-full">
+      <!-- Navigation -->
+      <section id="navigation"  class="  px-10 py-6 lg:px-20 xl:px-40">
+        <div
+          class="nav flex flex-row justify-between items-center border-primary nav-border"
+        >
+          <img src="/img/NextCity-logo.png" class="logo" alt="NextCity Logo" width="100px" />
+          <!-- navs -->
+          <div class="nav hidden md:block">
+            <ul class="flex flex-row lg:gap-10 justify-between gap-6">
+              <li ><a class="nav-link" href="#">Home</a></li>
+              <li><a class="nav-link" href="#section-1">About Us</a></li>
+              <li><a class="nav-link" href="#section-2">Services</a></li>
+              <li><a class="nav-link" href="#section-3">Agents</a></li>
+              <li><a class="nav-link"  href="#section-4" >Reviews</a></li>
+            </ul>
+          </div>
+          <!-- Sign in and menu bar -->
+          <div class="flex gap-6   flex-row items-center">
+            <!-- Log in and sign up -->
+              <button id="contact-btn" class="btn-primary hidden md:block  z-199 cursor-pointer">
+            <i  class="fa fa-phone pr-2 text-white" aria-hidden="true"></i>
+            Contact Us
+          </button> 
+            <!-- Hamburger Menu  -->
+            <div class="md:hidden">
+              <i
+                class="fa-bars open-modal cursor-pointer fa  text-primary text-3xl"
+                aria-hidden="true"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="home" class="p-10 lg:px-20 xl:px-40">
+        <div class="text-center md:text-left md:w-3/5 xl:2/5 space-y-6">
+          <h1 class="text-8xl lg:text-8xl xl:text-[7rem] md:text-7xl font-lora text-neutral capitalize">
+            Find your <span class="text-primary">dream home</span> today!
+          </h1>
+          <p class="p-text  w-3/4 mx-auto md:mx-0">
+            Want to find home? We are ready to help you find one that suit your
+            lifestyle and needs
+          </p>
+        <!-- constct -->
+           <button id="get-started-btn" class="btn-primary absolute z-199 cursor-pointer">
+            Get started
+          </button>
+
+        </div>
+      </section>
+      <!-- hero image -->
+      <img
+        src="/img/frames-for-your-heart-mR1CIDduGLc-unsplash.png"
+        alt="Hero image"
+        class="w-full mx-auto md:transform md:-translate-y-52"
+      />
+    </header>
+    <!-- body -->
+    <main class="h-screen w-full md:-mt-52 bg-white">
+      <article class="p-10 lg:px-20 xl:px-40">
+        <!-- User liesting details -->
+        <section
+          class="box-container mx-auto transform -translate-y-20  drop-shadow-lg"
+        >
+          <!-- Location -->
+          <div class="flex  items-center gap-4">
+            <div>
+              <h3 class="heading4">Location</h3>              
+              <input id="location" type="text" class="p-text  text-xs focus:outline-none" placeholder="Where do you want to live?"  >
+            </div>
+            <i class="fa-location-pin fa p-text" aria-hidden="true"></i>
+          </div>
+          <!-- Property Type -->
+          <div class="flex items-center gap-4">
+            <div>
+              <h3 class="heading4">Property Type</h3>
+                            <input id="property-type" type="text" class="p-text  text-xs focus:outline-none" placeholder="Choose your property type?"  >
+                                </div>
+            <i class="fa-house fa p-text" aria-hidden="true"></i>
+          </div>
+          <!--Pricing -->
+          <div class="md:flex items-center hidden gap-4">
+            <div>
+              <h3 class="heading4">Pricing</h3>
+              <p class="p-text text-xs">Choose your price range</p>
+            </div>
+            <i class="fa-money-bill fa p-text" aria-hidden="true"></i>
+          </div>
+          <button id="search" class="btn-primary btn-hover">Search</button>
+        </section>
+        <!-- About Us -->
+        <section id="section-1" class="section">
+          <!-- image side -->
+          <div class="w-full items-center space-x-10 flex flex-col md:flex-row ">
+            <img
+              src="/img/Group 6.png"
+              alt="Preview pictures"
+              class="rounded-2xl md:hidden"
+            />
+            <img
+              src="/img/Box.png"
+              alt="Preview pictures"
+              class="rounded-2xl w-2/5 hidden md:block"
+            />
+          <!-- texts side -->
+          <div class="md:w-/5"> 
+            <!-- Heading -->
+            <h2 class="w-4/5   md:mx-0  heading2 text-center mx-auto md:text-left">
+              We Make Your <span class="text-primary">Dream Home</span> Becomes
+              Reality
+            </h2>
+            <p class="pt-5 p-text w-4/5 md:mx-0 mx-auto text-center md:text-left">
+              With ten years of experience, we connect clients with their
+              perfect properties. Our Mission: To make real estate buying,
+              selling, and renting seamless.
+            </p>
+            <div class="flex justify-between pt-5 w-3/5 mx-auto md:mx-0">
+              <!-- To win th clinets mind -->
+              <!-- Award -->
+
+              <div>
+                <div class="font-normal text-4xl text-primary">
+                  5K<span class="text-secondary">+</span>
+                </div>
+                <p class="p-text text-xs md:text-sm">Award Winning</p>
+              </div>
+              <!-- Happy clients -->
+              <div>
+                <div class="font-normal text-4xl text-primary">
+                  12K<span class="text-secondary">+</span>
+                </div>
+                <p class="p-text text-xs  md:text-sm">Happy Customers</p>
+              </div>
+              <!-- Rday properties -->
+              <div>
+              <div class="font-normal text-4xl text-primary">
+                20K<span class="text-secondary">+</span>
+              </div>
+              <p class="p-text text-xs md:text-sm">Proprties Ready</p>
+            </div>
+          </div>
+        </div>
+        </section>
+        <!-- Why Choose us -->
+         <section class=" section sub-section">
+          <!-- WHy Choose us heading -->
+          <div class="pb-20  text-center ">
+            <h2 class="heading2"> Why Chooose Us?</h2>
+            <p class="p-text ">With ten years of experience, we connect clients with their perfect properties. Our Mission: To make real estate buying, selling, and renting seamless.</p>
+          </div>
+          <!-- flex list -->
+          <div class="flex flex-row space-x-4 md:flex-nowrap  flex-wrap space-y-5   items-center justify-center lg:spacex-6  overflow-x-auto  " >
+            <!-- list 1 -->
+            <div class="max-w-3/5 choose-us-bg flex flex-col gap-2 text-center md:text-left  ">
+              <!-- icon -->
+              <div ><i class="fa-book fa text-lg bg-primary p-4 rounded-4xl text-white  " aria-hidden="true"></i></div>
+              <div class="py-2 text-center  md:text-left">
+              <h3 class="heading3">Expert Knowledge</h3>
+              <p class="p-text">With extensive market insight, we provide sound advice to help you make sound decision</p>
+              </div>
+
+            </div>
+                        <!-- list 2 -->
+
+          <div class="max-w-3/5 choose-us-bg flex flex-col gap-2 text-center md:text-left  ">
+              <!-- icon -->
+              <div ><i class="fa-user fa text-lg bg-primary p-4 rounded-4xl text-white  " aria-hidden="true"></i></div>
+              <div class="py-2 text-center  md:text-left">
+              <h3 class="heading3">Personalized Service</h3>
+              <p class="p-text">We understand that each client’s needs are unique, and we tailor our approach to ensure our satisfaction</p>
+              </div>
+
+            </div>
+                        <!-- list 3 -->
+
+             <div class="max-w-3/5 choose-us-bg flex flex-col gap-2 text-center md:text-left  ">
+              <!-- icon -->
+              <div ><i class="fa-shield fa text-lg bg-primary p-4 rounded-4xl text-white  " aria-hidden="true"></i></div>
+              <div class="py-2 text-center  md:text-left">
+              <h3 class="heading3">Trusted Network</h3>
+              <p class="p-text">We work with reputable financial institutions, property inspectors, and legal advisors to ensure a seamless process </p>
+              </div>
+
+            </div>
+                        <!-- list 4 -->
+
+            <div class="max-w-3/5 flex choose-us-bg flex-col gap-2 text-center md:text-left  ">
+              <!-- icon -->
+              <div ><i class="fa-handshake-simple flex justify-items-center fa text-lg bg-primary p-4  rounded-4xl text-white  " aria-hidden="true"></i></div>
+              <div class="py-2 text-center  md:text-left">
+              <h3 class="heading3">Integrity First</h3>
+              <p class="p-text">We Operate with transparency and always put our client’s best interests at the forefront.</p>
+              </div>
+
+            </div>        
+           </div>
+         </section>
+
+         <!-- New Listed apartment -->
+          <section id="section-2" class=" section sub-section">
+            <!-- heading -->
+            <div class="flex justify-between items-center mb-6   ">
+              <div class="w-3/4">
+               <h3 class="heading2">Find Newly Listed Apartments</h3>
+              <p class="p-text">Explore all features and amenities and get amazed with our beautiful residences.</p>
+              </div>
+              <div class="space-x-6 flex arrows ">
+                
+                <i class="fa fa-arrow-left p-4 border-1 text-primary    border-primary  rounded-4xl" aria-hidden="true"></i>
+                <i class="fa fa-arrow-right  p-4 border-1 text-primary    border-primary rounded-4xl" aria-hidden="true"></i>
+               
+              </div>
+            </div>
+            <!-- apartment cards -->
+             <article class="">
+
+             <section class="flex all-apartment overflow-x-hidden  space-x-4 gap-6 ">
+              <!-- card 1 -->
+             <div class="space-y-4 apartment apartment-1 min-w-[200px] max-w-3/5 mx-auto bg-background rounded-lg p-5  ">
+              <!-- image -->
+               <img src="/img/apartment-img-1.png" alt="Apartments List" class="w-full"/>
+               <!-- text -->
+              <div  class="flex justify-between items-center">
+                <div class="space-y-1">
+                <h3 class="font-normalt- text-2xl">$100,000</h3>
+                <p class="heading4 font-bold text-primary">Cedar Ridge Residences</p>
+                <p class="p-text text-sm">Peaceful, green living</p>
+                </div>
+                <span class="bg-primary confirm-fav hidden px-2 rounded-md py-1 text-sm text-background">Added to favourite</span>
+                <i class=" text-primary cursor-pointer  fa-regular fa-heart " aria-hidden="true"> </i>
+              </div>
+             </div>
+                <!-- card 2 -->
+             <div class="space-y-4 apartment-2  max-w-3/5 min-w-[200px] mx-auto bg-background apartment rounded-lg p-5  ">
+              <!-- image -->
+               <img src="/img/apartment-img-2.png" alt="Apartments List" class="w-full">
+               <!-- text -->
+              <div  class="flex justify-between items-center">
+                <div class="space-y-1">
+                <h3 class="font-normalt- text-2xl">$110,000</h3>
+                <p class="heading4 font-bold text-primary">The Maple Haven</p>
+                <p class="p-text text-sm">Cozy, modern comfort</p>
+                </div>
+                <span class="bg-primary confirm-fav hidden px-2 rounded-md py-1 text-sm text-background">Added to favourite</span>
+                <i class="fa-regular cursor-pointer text-primary fa-heart " aria-hidden="true"> </i>
+              </div>
+             </div>
+
+                    <!-- card 3 -->
+             <div class="space-y-4 min-w-[200px] apartment-3  apartment  max-w-3/5 mx-auto bg-background rounded-lg p-5  ">
+              <!-- image -->
+               <img src="/img/apartment-img-3.png" alt="Apartments List" class="w-full">
+               <!-- text -->
+              <div  class="flex justify-between items-center">
+                <div class="space-y-1">
+                <h3 class="font-normalt- text-2xl">$98,000</h3>
+                <p class="heading4 font-bold text-primary">Azure Height</p>
+                <p class="p-text text-sm">Luxury with  view</p>
+                </div>
+                <span class="bg-primary confirm-fav hidden px-2 rounded-md py-1 text-sm text-background">Added to favourite</span>
+                <i class="fa-regular cursor-pointer text-primary fa-heart " aria-hidden="true"> </i>
+              </div>
+             </div>
+
+                    <!-- card 4 -->
+             <div class="space-y-4 min-w-[200px] apartment-4 apartment  max-w-3/5 mx-auto bg-background rounded-lg p-5  ">
+              <!-- image -->
+               <img src="/img/apartment-img-4.png" alt="Apartments List" class="w-full">
+               <!-- text -->
+              <div  class="flex justify-between items-center">
+                <div class="space-y-1">
+                <h3 class="font-normalt- text-2xl">$120,000</h3>
+                <p class="heading4 font-bold text-primary">Oakview Estates</p>
+                <p class="p-text text-sm">Nature urban style</p>
+                </div>
+                <span class="bg-primary confirm-fav hidden px-2 rounded-md py-1 text-sm text-background">Added to favourite</span>
+                <i class="fa-regular cursor-pointer text-primary fa-heart " aria-hidden="true"> </i>
+              </div>
+             </div>
+</section>
+</div>
+               </article>
+          </section>
+      </article>
+
+          <!-- Meet our agents -->
+          <section id="section-3" class=" section new-section">
+            <!-- heading -->
+              <div class="w-3/4 text-center mx-auto space-y-2 mb-10">
+               <h3 class="heading2">Meet Our Experienced Team of <span class="text-primary">Real Estate Professionals</span></h3>
+              <p class="p-text">Connect with Our Agents and see how we can help you find the right property.</p>
+              </div>
+              
+            <!-- Our Agents -->
+             <section class="flex flex-row space-x-4 gap-4 ">
+              <!-- card 1 -->
+             <div class="space-y-4  max-w-2/5 min-w-[150px] mx-auto bg-background rounded-lg p-5  ">
+              <!-- image -->
+               <img src="/img/agent-1.png" alt="Apartments List" class="w-full">
+               <!-- text -->
+                <div class="space-y-1">
+                <p class="heading4 font-bold text-primary">Adeyemo Taiwo M</p>
+                <p class="p-text text-sm">Lead Real Estate Agent</p>
+                </div>
+             </div>
+              <!-- card 1 -->
+             <div class="space-y-4  max-w-2/5 min-w-[150px] mx-auto bg-background rounded-lg p-5  ">
+              <!-- image -->
+               <img src="/img/agent-2.png" alt="Apartments List" class="w-full">
+               <!-- text -->
+                <div class="space-y-1">
+                <p class="heading4 font-bold text-primary">Jordan Liu</p>
+                <p class="p-text text-sm">Investment Advisor</p>
+                </div>
+             </div>
+
+                <!-- card 1 -->
+             <div class="space-y-4   max-w-2/5 min-w-[150px] mx-auto bg-background rounded-lg p-5  ">
+              <!-- image -->
+               <img src="/img/agent-3.png" alt="Apartments List" class="w-full">
+               <!-- text -->
+                <div class="space-y-1">
+                <p class="heading4 font-bold text-primary">Samantha Reyes</p>
+                <p class="p-text text-sm">Senior Property Consultant</p>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <!-- Testimonial -->
+          <section id="section-4" class="section new-section">
+             <!-- heading -->
+              <div class="w-3/4  md:w-1/2 text-center mx-auto space-y-2 mb-20 nav-border">
+               <h3 class="heading2">We Build In Trust With <span class="text-primary">Our Clients and Agents</span></h3>
+              <p class="p-text">Hear from Our Happy Clients, and see how they enjoyed our services.</p>
+              </div>
+              <!-- reviews -->
+              <section class="relative overflow-x-visible flex  justify-center">
+                <!-- review 1 -->
+                <div class="max-w-3/5  review  mx-auto space-y-5  absolute">
+                  <p class="p-text  text-center">
+                    Thanks to NexCity Realty, buying my first investment property was smooth and stress-free. Their expertise and dedication made the entire process seamless. I highly recommend them to anyone looking for reliable real estate support!
+                  </p>
+                  <!-- Reviwer details -->
+                  <div class="flex justify-center gap-4 mx-auto  w-full">
+                
+                    <img src="/img/agent-1.png" alt="Client Image" class="rounded-full w-16 h-16" >
+            
+                    <div>
+                      <h3 class="text-xl font-bold">Adeyemo Taiwo M</h3>
+                      <p class="p-text">Frontend Engineer</p>
+                      <div class="flex gap-1">
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa-regular fa-star text-xs text-amber-400"></i>
+                        <i class="fa-regular fa-star text-xs text-amber-400"></i>
+                      </div>
+                     
+                    </div>
+                  </div>
+                </div>
+
+                    <!-- review 2 -->
+                <div class="max-w-3/5 review  mx-auto space-y-5  absolute">
+                  <p class="p-text  text-center">
+                    NexCity Realty turned what I expected to be a complicated process into a straightforward and rewarding experience. Their team is professional, responsive, and genuinely cares about your success. I wouldn’t hesitate to work with them again!
+                  </p>
+                  <!-- Reviwer details -->
+                  <div class="flex justify-center gap-4 mx-auto  w-full">
+                
+                    <img src="/img/agent-2.png" alt="Client Image" class="rounded-full w-16 h-16" >
+            
+                    <div>
+                      <h3 class="text-xl font-bold">Mathew Syvester</h3>
+                      <p class="p-text">CEO at HMint Realestate</p>
+                      <div class="flex gap-1">
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa-regular fa-star text-xs text-amber-400"></i>
+                      </div>
+                       
+                    </div>
+                  </div>
+
+                </div>
+                   
+                    <!-- review 3 -->
+                <div class="max-w-3/5 review  mx-auto  space-y-5 absolute">
+                  <p class="p-text  text-center">
+                    Working with NexCity Realty was the best decision I made as a first-time investor. They walked me through every step with patience and clarity. Their knowledge of the market and commitment to my goals gave me total confidence throughout the process. Highly recommended!
+                  </p>
+                  <!-- Reviwer details -->
+                  <div class="flex justify-center gap-4 mx-auto  w-full">
+                
+                    <img src="/img/agent-3.png" alt="Client Image" class="rounded-full w-16 h-16" >
+            
+                    <div>
+                      <h3 class="text-xl font-bold">Cythia Saffire</h3>
+                      <p class="p-text">Product Engineer</p>
+                      <div class="flex gap-1">
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa fa-star text-xs text-amber-400"></i>
+                        <i class="fa-regular fa-star text-xs text-amber-400"></i>
+                      </div>
+                     
+                    </div>
+                  </div>
+                </div>
+                   
+                    <!-- ArrowS -->
+                     <div class=" review-arrows text-primary text-2xl  w-full mx-auto ">
+                  <i class="fa fa-arrow-left transform absolute top-1/2 translate-x-10 -translate-y-1/2  left-0   rounded-4xl" aria-hidden="true"></i>
+                  <i class="fa fa-arrow-right  absolute -translate-y-1/2 top-1/2 right-0 -translate-x-10    rounded-4xl" aria-hidden="true"></i>
+              </div>  
+                
+              </section>
+          </section>
+<!-- List your home section -->
+          <section class=" list-apartment mt-52 section mx-10 md:relative  md:h-fit flex flex-col-reverse md:flex-row items-center  mb-20 bg-background rounded-4xl     ">
+            <!-- image -->
+              <div class=" md:right-0 md:bottom-0 md:absolute mx-auto md-mx-0  ">
+              <img src="/img/listed-home.png" alt="Listed Homes" class="md:h-120 md:scale-x-[-1] md:rounded-bl-4xl rounded-b-4xl   " >
+            </div>
+             <!-- contents -->
+              <div class="px-10 pt-10 md:z-10 md:w-3/5 md:py-10 md:text-left  text-center ">
+                <div>
+                <h2 class="heading2 capitalize">Get your home <p class="text-primary block ">listed as an owner</p></h2>
+                 <p class="p-text pb-5">Hear from Our Happy Clients, and see how they enjoyed our services</p>
+              
+             <form action="#" class="flex bg-white  justify-between px-4 py-2 rounded-lg ">
+              <input id="get-listed" type="text" placeholder="list my property" name="property" id="list" class="focus:outline-none  placeholder:capitalize placeholder:text-neutral placeholder:opacity-60">
+              <button id="list" class="bg-primary rounded-lg text-white px-8 py-3 w-35 ">List Now</button>
+             </form>
+             </div>
+             </div>
+          </section> 
+    
+     <footer class="new-section section   bg-primary w-full pt-20 rounded-t-4xl px-10 h-fit" >
+      <!-- Footer section -->
+      <section  class="md:flex justify-between ">
+        <!-- About the company -->
+        <div class="text-center md:w-1/4 md:text-left " >
+            <img src="/img/nextCity logo white.png" alt="company logo" class="w-40 mx-auto md:mx-0 pt-10"  >
+          <p class=" text-white opacity-75 mt-10">NexCity Realty: "Your trusted partner in real estate, connecting you to premium properties and personalized service. Whether buying, selling, or investing, NexCity Realty is committed to making every step of your journey smooth, transparent, and successful.</p>
+        </div>
+        <!-- <div class="flex gap-10 items-center md:w-2/4 md:gap-20 justify-center "> -->
+        <!-- Quick links -->
+        <div class="text-center text-white mt-10 space-y-3">
+          <h2 class="heading4">Quick Links</h2>
+            <ul class="text-center opacity-60 space-y-2">
+                 <li><a class="nav-link" href="#"  href="home">Home</a></li>
+              <li><a class="nav-link  link" href="#section-1" href="about">About Us</a></li>
+              <li><a class="nav-link link" href="#section-2" href="services">Services</a></li>
+              <li><a class="nav-link link" href="#section-3" href="agents">Agents</a></li>
+              <li><a class="nav-link link" href="#section-4" href="reviews">Reviews</a></li>
+            </ul>
+        </div>
+        <!-- Helpful resources -->
+        <div class="text-center text-white mt-10 space-y-3">
+          <h2 class="heading4">Helpful Resources</h2>
+            <ul class="text-center opacity-60 space-y-2">
+                 <li><a  class="link" href="home">FAQs</a></li>
+              <li><a class="link" href="about">Blog</a></li>
+              <li><a class="link" href="services">Testimonials</a></li>
+              <li><a class="link" href="agents">Privacy Policy</a></li>
+              <li><a class="link" href="reviews">Terms of Service</a></li>
+            </ul>
+        </div>
+        <!-- </div> -->
+        
+        <!-- Newsteller -->
+       <div class="text-center text-white mt-10 w-3/5 mx-auto md:mx-0 space-y-3 md:w-1/4">
+          <h2 class="heading4">Subscribe to Newslettter</h2>
+          <p  class=" text-white opacity-75">Stay updated with the latest property listing, market trends and exclusive offer.</p>
+            <form action="#" class="border-1 border-white border-opacity-50 text-center text-white px-4 py-2  rounded-lg">
+              <input type="email" id="email" placeholder="Enter your email" name="property" id="list" class="focus:outline-none  placeholder:capitalize text-center text-white placeholder:text-white justify-center placeholder:opacity-60">
+             </form>
+            <button id="subscribe-btn" class=" flex bg-white hover:text-white hover:bg-secondary  justify-center  text-primary  w-full  px-4 py-2  rounded-lg     "> Subscribe Now</button>
+        </div>
+              </section>
+
+        <!-- social media links -->
+          <ul class="flex justify-center gap-8 items-center mt-10 ">
+            <li><a href=""><i class="fab fa-facebook hover:text-secondary cursor-pointer  text-white" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram hover:text-secondary cursor-pointer text-white" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fab fa-linkedin hover:text-secondary cursor-pointer text-white" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fab fa-x-twitter hover:text-secondary cursor-pointer text-white" aria-hidden="true"></i></a></li>
+
+          </ul>
+        <!-- copyright -->
+        <div class=" text-white opacity-75 mt-10 text-center">&copy;2004 NexCity Realty. All rights reserved.</div>
+        
+      </footer> 
+      <div class="bg-background h-4 w-full"></div>
+    </main> 
+  </body>
+</html>
