@@ -236,9 +236,13 @@ searchBtn.forEach((search) =>
 listBtn.addEventListener(`click`, function (e) {
   e.preventDefault();
   const getListProperty = document.querySelector(`#get-listed`).value;
-  alert(
-    `Cheers🥳🥳 Your Property "${getListProperty}" is now listed, Thanks for trusting us`
-  );
+  if (getListProperty) {
+    alert(
+      `Cheers🥳🥳 Your Property "${getListProperty}" is now listed, Thanks for trusting us`
+    );
+  } else {
+    alert(`Kinly enter a property to be listed`);
+  }
 });
 /* Subsib toemail */
 subscribeBtn.addEventListener(`click`, function () {
