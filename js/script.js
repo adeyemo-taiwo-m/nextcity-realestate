@@ -16,7 +16,7 @@ const apartment = document.querySelectorAll(`.apartment`);
 const reviewArrows = document.querySelector(`.review-arrows`);
 const review = document.querySelectorAll(`.review`);
 const contactBtn = document.querySelector(`#contact-btn`);
-const searchBtn = document.querySelector(`#search`);
+const searchBtn = document.querySelectorAll(`#search`);
 const listBtn = document.querySelector(`#list`);
 const subscribeBtn = document.querySelector(`#subscribe-btn`);
 const addToFav = document.querySelectorAll(`.fa-heart `);
@@ -215,13 +215,19 @@ getStarted.addEventListener(`click`, function () {
 });
 /* Search house */
 
-searchBtn.addEventListener(`click`, function (e) {
-  const locationInput = document.querySelector(`#location`).value;
-  const propertyInput = document.querySelector(`#property-type`).value;
-  alert(
-    `Thanks for checking our website, we'll notify you about ${propertyInput} in ${locationInput} through your email as soon as possible.`
-  );
-});
+searchBtn.forEach((search) =>
+  search.addEventListener(`click`, function (e) {
+    const locationInput = document.querySelector(`#location`).value;
+    const propertyInput = document.querySelector(`#property-type`).value;
+    if (location & propertyInput) {
+      alert(
+        `Thanks for checking our website, we'll notify you about ${propertyInput} in ${locationInput} through your email as soon as possible.`
+      );
+    } else {
+      alert(`Kindly enter the details to search for a house.`);
+    }
+  })
+);
 //Implmnting lazy loading with About Us, agents,  apartment and listd images
 /* sign up */
 
