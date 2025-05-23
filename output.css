@@ -235,6 +235,9 @@
   .z-199 {
     z-index: 199;
   }
+  .z-1000 {
+    z-index: 1000;
+  }
   .mx-10 {
     margin-inline: calc(var(--spacing) * 10);
   }
@@ -726,6 +729,11 @@
   .md\:z-10 {
     @media (width >= 768px) {
       z-index: 10;
+    }
+  }
+  .md\:z-199 {
+    @media (width >= 768px) {
+      z-index: 199;
     }
   }
   .md\:mx-0 {
