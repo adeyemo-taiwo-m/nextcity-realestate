@@ -103,9 +103,8 @@
     <main class="h-screen w-full md:-mt-52 bg-white">
       <article class="p-10 lg:px-20 xl:px-40">
         <!-- User liesting details -->
-        <section
-          class="box-container mx-auto transform -translate-y-20 drop-shadow-nav-background border-2 border-white  drop-shadow-lg"
-        >
+        <section  class="bg-white  transform  -translate-y-20   rounded-lg">
+          <div class="box-container mx-auto drop-shadow-nav-background border-2 border-white  drop-shadow-lg">
           <!-- Location -->
           <div class="flex  items-center gap-4">
             <div>
@@ -130,7 +129,9 @@
             </div>
             <i class="fa-money-bill fa p-text" aria-hidden="true"></i>
           </div>
-          <button id="search" class="btn-primary btn-hover">Search</button>
+          <button id="search" class="btn-primary hidden md:block btn-hover">Search</button>
+          <button id="search" class="bg-primary rounded-lg w-fit text-white px-4 py-4; md:hidden btn-hover"><i class="fa fa-search text-white" aria-hidden="true"></i></button>
+          </div>
         </section>
         <!-- About Us -->
         <section id="section-1" class="section">
