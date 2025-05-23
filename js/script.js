@@ -89,9 +89,10 @@ const closeUpModal = function (e) {
 };
 
 const openUpModal = function (e) {
+  document.querySelector(`#modal`).scrollIntoView({ behavior: `smooth` });
+  // reset animation
   modal.classList.remove(`hidden`);
   modal.classList.remove(`modal-slide-out`);
-  // reset animation
   modal.classList.remove(`modal-slide-out`);
   //
   modal.classList.add(`modal-slid-in`);
