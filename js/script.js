@@ -204,13 +204,15 @@ getStarted.addEventListener(`click`, function () {
   document
     .querySelector(`.list-apartment`)
     .scrollIntoView({ behavior: `smooth` });
+  // List focus
+  document.querySelector(`#get-listed`).focus();
 });
 /* Search house */
-
+const locationInput = document.querySelector(`#location`).value;
+const propertyInput = document.querySelector(`#property-type`).value;
 searchBtn.forEach((search) =>
   search.addEventListener(`click`, function (e) {
-    const locationInput = document.querySelector(`#location`).value;
-    const propertyInput = document.querySelector(`#property-type`).value;
+    //
     if (location && propertyInput) {
       alert(
         `Thanks for checking our website, we'll notify you about ${propertyInput} in ${locationInput} through your email as soon as possible.`
@@ -218,8 +220,14 @@ searchBtn.forEach((search) =>
     } else {
       alert(`Kindly enter your full house details to search for a house.`);
     }
+    //
+    document.querySelector(`#location`).value =
+      document.querySelector(`#property-type`).value =
+      document.querySelector(`#pricing`).value =
+        ``;
   })
 );
+
 //Implmnting lazy loading with About Us, agents,  apartment and listd images
 /* sign up */
 
