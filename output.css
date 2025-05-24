@@ -41,7 +41,6 @@
     --radius-2xl: 1rem;
     --radius-4xl: 2rem;
     --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -838,6 +837,16 @@
   .md\:py-10 {
     @media (width >= 768px) {
       padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:pr-32 {
+    @media (width >= 768px) {
+      padding-right: calc(var(--spacing) * 32);
+    }
+  }
+  .md\:pl-32 {
+    @media (width >= 768px) {
+      padding-left: calc(var(--spacing) * 32);
     }
   }
   .md\:text-left {
