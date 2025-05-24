@@ -24,7 +24,7 @@
   </head>
   <body class="relative overflow-x-hidden w-screen">
     <!-- Modal scren -->
-    <section id="modal" class="h-screen fixed  w-3/5 hidden bg-modal-bg rounded-tl-4xl rounded-bl-4xl  z-1000  top-0 right-0  modal-bg  text-background "> 
+    <section id="modal" class="h-screen fixed  w-3/5 hidden bg-modal-bg   z-1000  top-0 right-0  modal-bg  text-background transition-all "> 
         <i
                 class="fa-times close-modal absolute cursor-pointer   top-14 right-10 fa text-background text-3xl"
                 aria-hidden="true"
@@ -104,7 +104,7 @@
       <article class="p-10 lg:px-20 xl:px-40">
         <!-- User liesting details -->
         <section  class="bg-white  transform  -translate-y-20   rounded-lg">
-          <div class="box-container mx-auto drop-shadow-nav-background border-2 border-white  drop-shadow-lg">
+          <div class="box-container mx-auto  border-2 border-white  ">
           <!-- Location -->
           <div class="flex  items-center gap-4">
             <div>
@@ -194,9 +194,9 @@
             <p class="p-text ">With ten years of experience, we connect clients with their perfect properties. Our Mission: To make real estate buying, selling, and renting seamless.</p>
           </div>
           <!-- flex list -->
-          <div class="flex flex-row space-x-4 md:flex-nowrap  flex-wrap space-y-5   items-center justify-center lg:spacex-6  overflow-x-auto  " >
+          <div class="flex flex-row space-x-4 md:flex-nowrap md:items-start  flex-wrap space-y-5   items-center justify-center lg:spacex-6  overflow-x-auto  " >
             <!-- list 1 -->
-            <div class="max-w-3/5 choose-us-bg flex flex-col gap-2 text-center md:text-left  ">
+            <div class="max-w-4/5  choose-us-bg flex flex-col gap-2 text-center md:text-left  ">
               <!-- icon -->
               <div ><i class="fa-book fa text-lg bg-primary p-4 rounded-4xl text-white  " aria-hidden="true"></i></div>
               <div class="py-2 text-center  md:text-left">
@@ -207,7 +207,7 @@
             </div>
                         <!-- list 2 -->
 
-          <div class="max-w-3/5 choose-us-bg flex flex-col gap-2 text-center md:text-left  ">
+          <div class="max-w-4/5  choose-us-bg flex flex-col gap-2 text-center md:text-left  ">
               <!-- icon -->
               <div ><i class="fa-user fa text-lg bg-primary p-4 rounded-4xl text-white  " aria-hidden="true"></i></div>
               <div class="py-2 text-center  md:text-left">
@@ -218,7 +218,7 @@
             </div>
                         <!-- list 3 -->
 
-             <div class="max-w-3/5 choose-us-bg flex flex-col gap-2 text-center md:text-left  ">
+             <div class="max-w-4/5  choose-us-bg flex flex-col gap-2 text-center md:text-left  ">
               <!-- icon -->
               <div ><i class="fa-shield fa text-lg bg-primary p-4 rounded-4xl text-white  " aria-hidden="true"></i></div>
               <div class="py-2 text-center  md:text-left">
@@ -229,7 +229,7 @@
             </div>
                         <!-- list 4 -->
 
-            <div class="max-w-3/5 flex choose-us-bg flex-col gap-2 text-center md:text-left  ">
+            <div class="max-w-4/5  flex choose-us-bg flex-col gap-2 text-center md:text-left  ">
               <!-- icon -->
               <div ><i class="fa-handshake-simple flex justify-items-center fa text-lg bg-primary p-4  rounded-4xl text-white  " aria-hidden="true"></i></div>
               <div class="py-2 text-center  md:text-left">
@@ -373,7 +373,7 @@
           </section>
 
           <!-- Testimonial -->
-          <section id="section-4"  class="section  overflow-x-hidden   new-section">
+          <section id="section-4"  class="section h-fit  overflow-x-hidden   new-section">
              <!-- heading -->
               <div class="w-3/4  md:w-1/2 text-center mx-auto space-y-2 mb-20 nav-border">
                <h3 class="heading2">We Build In Trust With <span class="text-primary">Our Clients and Agents</span></h3>
@@ -457,13 +457,13 @@
                   </div>
                 </div>
                    
-                    <!-- ArrowS -->
-                     <div class=" review-arrows relative z-100 text-primary text-2xl  w-full mx-auto ">
-                  <i class="fa fa-arrow-left  cursor-pointer  transform absolute top-1/2 translate-x-10 -translate-y-1/2  left-0   rounded-4xl" aria-hidden="true"></i>
-                  <i class="fa fa-arrow-right   cursor-pointer  absolute -translate-y-1/2 top-1/2 right-0 -translate-x-10    rounded-4xl" aria-hidden="true"></i>
-              </div>  
-                
+               <!-- ArrowS -->
+                     <div class=" review-arrows translate-y-6   flex flex-row justify-between my-10 transform absolute z-50 text-primary text-2xl  w-full mx-auto ">
+                  <i class="fa fa-arrow-left pl-10 cursor-pointer rounded-4xl" aria-hidden="true"></i>
+                  <i class="fa fa-arrow-right pr-10 cursor-pointer  rounded-4xl" aria-hidden="true"></i>
+              </div> 
               </section>
+                    
           </section>
 <!-- List your home section -->
           <section class=" list-apartment mt-72 section mx-10 md:relative  md:h-fit flex flex-col-reverse md:flex-row items-center  mb-20 bg-background rounded-4xl     ">
@@ -538,7 +538,7 @@
 
           </ul>
         <!-- copyright -->
-        <div class=" text-white opacity-75 mt-10 text-center">&copy;2004 NexCity Realty. All rights reserved.</div>
+        <div class=" text-white opacity-75 mt-10 text-center">&copy;2025 NexCity Realty. All rights reserved.</div>
         
       </footer> 
       <div class="bg-background h-4 w-full"></div>
