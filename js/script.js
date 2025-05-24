@@ -80,15 +80,13 @@ nav.addEventListener(`mouseout`, function (e) {
 
 // The modal function
 const closeUpModal = function (e) {
-  modal.classList.add(`hidden`);
+  modal.classList.remove(`modal-show`);
 };
 
 const openUpModal = function (e) {
   document.querySelector(`#modal`).scrollIntoView({ behavior: `smooth` });
   // reset animation
-  modal.classList.add(`modal-slid-in`);
-  modal.style.transition = `2s all ease-in-out`;
-  modal.classList.remove(`hidden`);
+  modal.classList.add(`modal-show`);
   //
 };
 

@@ -161,7 +161,7 @@ body {
   backdrop-filter: blur(5px);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visbility 0.3 ease;
+  transition: opacity 3s ease, visbility 0.3 ease;
 }
 
 .modal-show {
