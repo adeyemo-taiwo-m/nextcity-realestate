@@ -41,6 +41,7 @@
     --radius-2xl: 1rem;
     --radius-4xl: 2rem;
     --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -242,6 +243,12 @@
   }
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
   }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
@@ -702,6 +709,15 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-transform {
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+  }
   .placeholder\:text-neutral {
     &::placeholder {
       color: var(--color-neutral);
@@ -720,6 +736,21 @@
   .placeholder\:opacity-60 {
     &::placeholder {
       opacity: 60%;
+    }
+  }
+  .hover\:mt-5 {
+    &:hover {
+      @media (hover: hover) {
+        margin-top: calc(var(--spacing) * 5);
+      }
+    }
+  }
+  .hover\:-translate-y-2 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-translate-y: calc(var(--spacing) * -2);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
     }
   }
   .hover\:bg-secondary {
@@ -1102,19 +1133,15 @@ body {
     transform: translateX(0%);
   }
 }
-@keyframes comeOutRight {
-  from {
-    opacity: 1;
-    transform: translateX(200%);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(300%);
-  }
-}
 .modal-bg {
   backdrop-filter: blur(5px);
-  transition: all 5s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visbility 0.3 ease;
+}
+.modal-show {
+  opacity: 1;
+  visibility: visible;
 }
 .nav-link-modal:hover {
   border-bottom: 2px rgba(191, 145, 5, 1) solid;
@@ -1329,6 +1356,10 @@ body {
   syntax: "*";
   inherits: false;
 }
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-scale-x {
   syntax: "*";
   inherits: false;
@@ -1383,6 +1414,7 @@ body {
       --tw-backdrop-opacity: initial;
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
+      --tw-ease: initial;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;

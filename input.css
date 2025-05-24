@@ -145,7 +145,7 @@ body {
   }
 }
 
-@keyframes comeOutRight {
+/* @keyframes comeOutRight {
   from {
     opacity: 1;
     transform: translateX(200%);
@@ -154,12 +154,19 @@ body {
     opacity: 0;
     transform: translateX(300%);
   }
-}
+} */
 
 .modal-bg {
   /* background-color: rgba(5, 68, 132, 0.8); */
   backdrop-filter: blur(5px);
-  transition: all 5s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visbility 0.3 ease;
+}
+
+.modal-show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav-link-modal:hover {

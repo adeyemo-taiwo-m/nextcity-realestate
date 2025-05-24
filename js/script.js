@@ -81,21 +81,15 @@ nav.addEventListener(`mouseout`, function (e) {
 // The modal function
 const closeUpModal = function (e) {
   modal.classList.add(`hidden`);
-
-  // const modalContent = modal.querySelector(`.modal-content`);
-  // modalContent.addEventListener(`animationend`, function () {
-  //   // modal.classList.add(`modal-slide-out`);
-  //   modalContent.classList.remove(`modal-slide-out`);
 };
 
 const openUpModal = function (e) {
   document.querySelector(`#modal`).scrollIntoView({ behavior: `smooth` });
   // reset animation
-  modal.classList.remove(`hidden`);
-  modal.classList.remove(`modal-slide-out`);
-  modal.classList.remove(`modal-slide-out`);
-  //
   modal.classList.add(`modal-slid-in`);
+  modal.style.transition = `2s all ease-in-out`;
+  modal.classList.remove(`hidden`);
+  //
 };
 
 // implmnt the modal screen
